@@ -1,16 +1,26 @@
 import React from "react";
 import { IoLogoInstagram } from "react-icons/io";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa6";
 import { FaFacebookSquare, FaPhone } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { Map, Marker } from "pigeon-maps";
+import { useRouter } from "next/router";
 
 const Index = () => {
+  const router = useRouter();
+
   const handleEnquiryFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Enquiry Form Submitted");
     // TODO: Handle form submission
+  };
+
+  const handleOpenLink = () => {
+    window.open(
+      'https://www.google.co.in/maps/place/Art+House+814/@13.0225985,77.6436839,17z/data=!4m14!1m7!3m6!1s0x3bae172eedd1abc3:0x4019a8d9b406b0ce!2sArt+House+814!8m2!3d13.0225985!4d77.6462588!16s%2Fg%2F11g6b0h9x5!3m5!1s0x3bae172eedd1abc3:0x4019a8d9b406b0ce!8m2!3d13.0225985!4d77.6462588!16s%2Fg%2F11g6b0h9x5?hl=en-in&entry=ttu',
+      '_blank'
+    );
   };
 
   return (
@@ -20,7 +30,10 @@ const Index = () => {
           <div>
             <h1 className="font-bold">Arthouse 814 ©2024</h1>
           </div>
-          <div>
+          <div
+            onClick={handleOpenLink}
+            className="cursor-pointer"
+          >
             <Map
               height={200}
               width={200}
@@ -38,19 +51,28 @@ const Index = () => {
           <div className="flex flex-col gap-3">
             <div className="flex gap-2">
               <div className="flex items-center gap-1">
-                <div>
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/alokkudige/?hl=en"
+                >
                   <IoLogoInstagram />
-                </div>
+                </a>
               </div>
               <div className="flex items-center gap-1">
-                <div>
-                  <FaXTwitter />
-                </div>
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/alok-kudige-05202a67/?originalSubdomain=in"
+                >
+                  <FaLinkedin />
+                </a>
               </div>
               <div className="flex items-center gap-1">
-                <div>
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/p/Art-House-814-100064240081396/"
+                >
                   <FaFacebookSquare />
-                </div>
+                </a>
               </div>
             </div>
             <div className="flex items-center gap-1">
@@ -58,7 +80,10 @@ const Index = () => {
                 <FaPhone />
               </div>
               <div>
-                <a href="tel:+91 9972658401" className="text-xs font-medium">
+                <a
+                  href="tel:+91 9972658401"
+                  className="text-xs font-medium hover:text-blue-500 duration-300"
+                >
                   +91 9972658401
                 </a>
               </div>
@@ -70,7 +95,7 @@ const Index = () => {
               <div>
                 <a
                   href="mailto:thearthouse814@gmail.com"
-                  className="text-xs font-medium"
+                  className="text-xs font-medium hover:text-blue-500 duration-300"
                 >
                   thearthouse814@gmail.com
                 </a>
@@ -87,7 +112,7 @@ m7!3m6!1s0x3bae172eedd1abc3:0x4019a8d9b406b0ce!2sArt+House+814!8m2!3d13.0225985!
 7.6462588!16s%2Fg%2F11g6b0h9x5!3m5!1s0x3bae172eedd1abc3:0x4019a8d9b406b0ce!8m2!3d
 13.0225985!4d77.6462588!16s%2Fg%2F11g6b0h9x5?hl=en-in&amp;entry=ttu"
                   target="_blank"
-                  className="text-xs font-medium"
+                  className="text-xs font-medium hover:text-blue-500 duration-300"
                 >
                   1st, 814, 5th A Cross Rd, HRBR Layout 1st Block, HRBR Layout,
                   Kalyan Nagar, Bengaluru, Karnataka 560043, India
