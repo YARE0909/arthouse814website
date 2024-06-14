@@ -56,7 +56,7 @@ const Index = () => {
                   className="block text-green-700 hover:text-[#9711A3] transition font-ChelseaMarket duration-300 py-2 md:py-0"
                   onClick={closeMenu}
                 >
-                  Art Classes + Curriculum
+                  Art class & Curriculum
                 </Link>
               </li>
               <li className="nav-item">

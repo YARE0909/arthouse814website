@@ -8,6 +8,7 @@ import CarouselComponent from "@/components/Home/Carousel";
 import { useRouter } from "next/router";
 import fs from "fs";
 import path from "path";
+import Link from "next/link";
 
 const Index = () => {
   const router = useRouter();
@@ -40,6 +41,7 @@ const Index = () => {
             analyzed to understand their strength and skills. We aim to help
             each student reach their full potential.
           </p>
+          <Image src="/assets/Home/About/person.jpg" alt="Placeholder" width={400} height={400} />
           <p className="max-w-3xl text-sm font-medium">
             Alok Kudige is a Chitrakala Parishath graduate who specialized in
             painting with a postgraduate degree in design communications,
@@ -130,20 +132,32 @@ const Index = () => {
             ].map((group) => (
               <div
                 key={group.age}
-                className="w-60 p-4 bg-white shadow-xl rounded-lg transform hover:scale-105 transition-transform cursor-pointer"
+                className="w-60 p-4 bg-white shadow-xl flex flex-col justify-between gap-5 rounded-lg"
                 onClick={() => router.push("/artClasses")}
               >
-                <h2 className="font-semibold text-center">{group.age}</h2>
-                <ul className="mt-2 space-y-1 text-gray-600 text-sm">
-                  {group.items.map((item, index) => (
-                    <li
-                      key={index}
-                      className="list-disc list-inside text-sm font-medium"
-                    >
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                <div>
+                  <h2 className="font-semibold text-center">{group.age}</h2>
+                  <ul className="mt-2 space-y-1 text-gray-600 text-sm">
+                    {group.items.map((item, index) => (
+                      <li
+                        key={index}
+                        className="list-disc list-inside text-sm font-medium"
+                      >
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="w-full">
+                  <Link
+                    className="w-full flex justify-center items-center px-4 py-2 rounded-md bg-blue-500 hover:bg-blue-600 duration-300"
+                    href="/artClasses"
+                  >
+                    <h1 className="font-medium text-xs text-white">
+                      Read More
+                    </h1>
+                  </Link>
+                </div>
               </div>
             ))}
           </div>
