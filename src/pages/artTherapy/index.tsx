@@ -8,7 +8,7 @@ const Index = () => {
       <div className="p-4 bg-gradient-to-r from-cyan-50 to-cyan-100 rounded-lg shadow-lg">
         <h1 className="text-3xl font-bold mb-8 text-cyan-800">Art Therapy</h1>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+        <div className="w-full flex flex-col gap-8 mb-12">
           {/* Children with Special Needs */}
           <div className="p-6 bg-white rounded-lg shadow-lg flex flex-col justify-between">
             <div>
@@ -47,13 +47,58 @@ const Index = () => {
                 <li className="font-semibold">Creativity</li>
               </ul>
             </div>
-            <Image
-              width={400}
-              height={400}
-              src="/assets/Home/About/4.jpg"
-              alt="Children with Special Needs"
-              className="mt-4 mx-auto max-w-full"
-            />
+          </div>
+
+          <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-5">
+              <div className="flex flex-col lg:flex-row items-center gap-5">
+                <Image
+                  src="/assets/Home/StudentStories/1.png"
+                  alt="Placeholder"
+                  className="lg:w-[40%] w-full h-96 object-cover rounded-lg shadow-lg"
+                  width={400}
+                  height={400}
+                />
+                <div className="w-full lg:w-[60%] p-8 bg-white shadow-xl rounded-lg">
+                  <h2 className="font-bold text-xl mb-2">Hi! Im Dhyan</h2>
+                  <p className="text-sm font-medium">
+                    I&apos;m a person with autism. I&apos;m interested in
+                    listening to stories, Tom and Jerry, and I love sunsets.
+                    Through art therapy, my goals focus on:
+                  </p>
+                  <ol className="list-disc">
+                    <li>Independence</li>
+                    <li>Regulation of behavioral issues</li>
+                    <li>Consistency in activities</li>
+                    <li>Communication</li>
+                  </ol>
+                </div>
+              </div>
+              <div className="flex flex-col lg:flex-row items-center gap-5">
+                <div className="w-full lg:w-[60%] p-8 bg-white shadow-xl rounded-lg">
+                  <h2 className="font-bold text-xl mb-2">Hi! Im Pragathi</h2>
+                  <p className="text-sm font-medium">
+                    I&apos;m a person with autism. I enjoy short conversations
+                    with people, sharing my day, drawing, and shopping. Through
+                    art therapy, my goals focus on:
+                  </p>
+                  <ol className="list-disc">
+                    <li>Communicating in a social group</li>
+                    <li>
+                      Establishing comfort in social settings through activities
+                    </li>
+                    <li>Cognitive stimulation</li>
+                  </ol>
+                </div>
+                <Image
+                  src="/assets/Home/StudentStories/2.png"
+                  alt="Placeholder"
+                  className="lg:w-[40%] w-full h-96 object-cover rounded-lg shadow-lg"
+                  width={400}
+                  height={400}
+                />
+              </div>
+            </div>
           </div>
 
           {/* Adults */}
@@ -82,13 +127,6 @@ const Index = () => {
                 individual the ability to channel their creativity.
               </p>
             </div>
-            <Image
-              width={400}
-              height={400}
-              src="/assets/Home/About/3.jpg"
-              alt="Adults"
-              className="mt-4 mx-auto max-w-full"
-            />
           </div>
         </div>
 

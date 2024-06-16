@@ -1,19 +1,17 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import Image from "next/image";
 import { galleryImages, parentTestimonials } from "@/Data/Home";
 import ParentTestimonialCard from "@/components/Home/ParentTestimonialCard";
 import { Gallery } from "react-grid-gallery";
 import CarouselComponent from "@/components/Home/Carousel";
-import { useRouter } from "next/router";
 import Link from "next/link";
 
 const Index = () => {
-  const router = useRouter();
-
   return (
     <Layout>
       <div className="p-4 w-full flex flex-col gap-10">
+        
         {/* Logo Section */}
         <section className="flex flex-col items-center">
           <Image
@@ -106,6 +104,7 @@ const Index = () => {
                   "Hand Grip",
                   "Hand and eye coordination",
                 ],
+                link: "/artClasses#fiveToSeven",
               },
               {
                 age: "8-14 Years",
@@ -116,6 +115,7 @@ const Index = () => {
                   "Pictorial Storytelling",
                   "Theme based art",
                 ],
+                link: "/artClasses#eightToTen",
               },
               {
                 age: "15+ Years",
@@ -126,6 +126,7 @@ const Index = () => {
                   "Elements of art and design",
                   "Creative thinking and visualisation",
                 ],
+                link: "/artClasses#elevenToFifteen",
               },
               {
                 age: "Adult",
@@ -136,12 +137,12 @@ const Index = () => {
                   "Clay Modelling",
                   "Mixed Media",
                 ],
+                link: "/artClasses#adults",
               },
             ].map((group) => (
               <div
                 key={group.age}
                 className="w-60 p-4 bg-white shadow-xl flex flex-col justify-between gap-5 rounded-lg"
-                onClick={() => router.push("/artClasses")}
               >
                 <div>
                   <h2 className="font-semibold text-center">{group.age}</h2>
@@ -159,7 +160,7 @@ const Index = () => {
                 <div className="w-full">
                   <Link
                     className="w-full flex justify-center items-center px-4 py-2 rounded-md bg-blue-500 hover:bg-blue-600 duration-300"
-                    href="/artClasses"
+                    href={group.link}
                   >
                     <h1 className="font-medium text-xs text-white">
                       Read More
@@ -226,9 +227,11 @@ const Index = () => {
         </section>
 
         {/* Student Stories Section */}
-        <section className="flex flex-col items-center space-y-8">
-          <div className="flex flex-col gap-10">
+        <section className="flex flex-col gap-5 items-center space-y-8">
+          <div>
             <h1 className="text-3xl font-bold text-red-700">Student Stories</h1>
+          </div>
+          <div className="flex flex-col gap-10">
             <div className="flex flex-col gap-5">
               <div className="flex flex-col lg:flex-row items-center gap-5">
                 <Image
@@ -244,13 +247,13 @@ const Index = () => {
                     I&apos;m a person with autism. I&apos;m interested in
                     listening to stories, Tom and Jerry, and I love sunsets.
                     Through art therapy, my goals focus on:
-                    <ol className="list-disc">
-                      <li>Independence</li>
-                      <li>Regulation of behavioral issues</li>
-                      <li>Consistency in activities</li>
-                      <li>Communication</li>
-                    </ol>
                   </p>
+                  <ol className="list-disc">
+                    <li>Independence</li>
+                    <li>Regulation of behavioral issues</li>
+                    <li>Consistency in activities</li>
+                    <li>Communication</li>
+                  </ol>
                 </div>
               </div>
               <div className="flex flex-col lg:flex-row items-center gap-5">
@@ -260,15 +263,14 @@ const Index = () => {
                     I&apos;m a person with autism. I enjoy short conversations
                     with people, sharing my day, drawing, and shopping. Through
                     art therapy, my goals focus on:
-                    <ol className="list-disc">
-                      <li>Communicating in a social group</li>
-                      <li>
-                        Establishing comfort in social settings through
-                        activities
-                      </li>
-                      <li>Cognitive stimulation</li>
-                    </ol>
                   </p>
+                  <ol className="list-disc">
+                    <li>Communicating in a social group</li>
+                    <li>
+                      Establishing comfort in social settings through activities
+                    </li>
+                    <li>Cognitive stimulation</li>
+                  </ol>
                 </div>
                 <Image
                   src="/assets/Home/StudentStories/2.png"
@@ -305,13 +307,10 @@ const Index = () => {
         <section className="flex flex-col items-center space-y-5">
           <h1 className="text-3xl font-bold text-teal-700">Gallery</h1>
           <div className="w-full">
-            <Image //TODO: Replace with video
-              src="/assets/Gallery/6.jpg"
-              alt="Gallery"
-              width={1920}
-              height={1080}
-              className="w-full h-96 object-cover"
-            />
+            <video width="400" controls className="w-full" autoPlay loop muted>
+              <source src="assets/Home/Gallery/video.mp4" type="video/mp4" />
+              Your browser does not support HTML video.
+            </video>
           </div>
           <div className="w-full">
             <Gallery images={galleryImages} />
