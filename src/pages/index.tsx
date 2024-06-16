@@ -230,7 +230,7 @@ const Index = () => {
           <div className="flex flex-col gap-10">
             <h1 className="text-3xl font-bold text-red-700">Student Stories</h1>
             <div className="flex flex-col gap-5">
-              <div className={`flex flex-col lg:flex-row items-center gap-5`}>
+              <div className="flex flex-col lg:flex-row items-center gap-5">
                 <Image
                   src="/assets/Home/StudentStories/1.png"
                   alt="Placeholder"
@@ -253,7 +253,7 @@ const Index = () => {
                   </p>
                 </div>
               </div>
-              <div className={`flex flex-col lg:flex-row items-center gap-5`}>
+              <div className="flex flex-col lg:flex-row items-center gap-5">
                 <div className="w-full lg:w-[60%] p-8 bg-white shadow-xl rounded-lg">
                   <h2 className="font-bold text-xl mb-2">Hi! Im Pragathi</h2>
                   <p className="text-sm font-medium">
