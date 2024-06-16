@@ -11,16 +11,7 @@ const ParentTestimonialCard = ({
   testimonial: string;
 }) => {
   return (
-    <div className="flex flex-col items-center gap-5 w-56">
-      <div>
-        <Image
-          src={image}
-          alt="Placeholder"
-          className="w-24 h-24 lg:w-44 lg:h-44 object-cover rounded-full"
-          width={400}
-          height={400}
-        />
-      </div>
+    <div className="flex flex-col items-center gap-5 w-64 shadow-xl rounded-md p-4">
       <div className="flex flex-col items-center">
         <div className="w-full flex justify-center">
           <h1 className="font-bold text-center">{parentName}</h1>

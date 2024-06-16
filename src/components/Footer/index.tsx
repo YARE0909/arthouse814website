@@ -18,8 +18,8 @@ const Index = () => {
 
   const handleOpenLink = () => {
     window.open(
-      'https://www.google.co.in/maps/place/Art+House+814/@13.0225985,77.6436839,17z/data=!4m14!1m7!3m6!1s0x3bae172eedd1abc3:0x4019a8d9b406b0ce!2sArt+House+814!8m2!3d13.0225985!4d77.6462588!16s%2Fg%2F11g6b0h9x5!3m5!1s0x3bae172eedd1abc3:0x4019a8d9b406b0ce!8m2!3d13.0225985!4d77.6462588!16s%2Fg%2F11g6b0h9x5?hl=en-in&entry=ttu',
-      '_blank'
+      "https://www.google.co.in/maps/place/Art+House+814/@13.0225985,77.6436839,17z/data=!4m14!1m7!3m6!1s0x3bae172eedd1abc3:0x4019a8d9b406b0ce!2sArt+House+814!8m2!3d13.0225985!4d77.6462588!16s%2Fg%2F11g6b0h9x5!3m5!1s0x3bae172eedd1abc3:0x4019a8d9b406b0ce!8m2!3d13.0225985!4d77.6462588!16s%2Fg%2F11g6b0h9x5?hl=en-in&entry=ttu",
+      "_blank"
     );
   };
 
@@ -30,10 +30,7 @@ const Index = () => {
           <div>
             <h1 className="font-bold">Arthouse 814 ©2024</h1>
           </div>
-          <div
-            onClick={handleOpenLink}
-            className="cursor-pointer"
-          >
+          <div onClick={handleOpenLink} className="cursor-pointer">
             <Map
               height={200}
               width={200}
@@ -56,14 +53,6 @@ const Index = () => {
                   href="https://www.instagram.com/alokkudige/?hl=en"
                 >
                   <IoLogoInstagram />
-                </a>
-              </div>
-              <div className="flex items-center gap-1">
-                <a
-                  target="_blank"
-                  href="https://www.linkedin.com/in/alok-kudige-05202a67/?originalSubdomain=in"
-                >
-                  <FaLinkedin />
                 </a>
               </div>
               <div className="flex items-center gap-1">
@@ -112,10 +101,13 @@ m7!3m6!1s0x3bae172eedd1abc3:0x4019a8d9b406b0ce!2sArt+House+814!8m2!3d13.0225985!
 7.6462588!16s%2Fg%2F11g6b0h9x5!3m5!1s0x3bae172eedd1abc3:0x4019a8d9b406b0ce!8m2!3d
 13.0225985!4d77.6462588!16s%2Fg%2F11g6b0h9x5?hl=en-in&amp;entry=ttu"
                   target="_blank"
-                  className="text-xs font-medium hover:text-blue-500 duration-300"
+                  className="text-xs font-medium hover:text-blue-500 duration-300 flex flex-col gap-1"
                 >
-                  1st, 814, 5th A Cross Rd, HRBR Layout 1st Block, HRBR Layout,
-                  Kalyan Nagar, Bengaluru, Karnataka 560043, India
+                  <span>
+                    1st, 814, 5th A Cross Rd, HRBR Layout 1st Block, HRBR
+                    Layout, Kalyan Nagar, Bengaluru, Karnataka 560043, India,
+                  </span>
+                  <span>Landmark : Next to Royal Enfield Showroom</span>
                 </a>
               </div>
             </div>

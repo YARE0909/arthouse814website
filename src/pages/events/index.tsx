@@ -11,12 +11,12 @@ import {
 const Index = () => {
   return (
     <Layout>
-      <div className="w-full flex flex-col gap-12 justify-center items-center p-8 bg-gradient-to-r from-purple-50 to-purple-100 min-h-screen rounded-lg shadow-lg">
-        <div className="w-full flex flex-col gap-3 justify-center items-center text-center">
-          <h1 className="font-bold text-2xl md:text-5xl text-purple-900">
-            Real Life Outdoor Practical Exposure & Art Aesthetics
+      <div className="w-full flex flex-col gap-8 justify-center items-center p-8 bg-gradient-to-r from-purple-50 to-purple-100 min-h-screen rounded-lg shadow-lg">
+        <div className="w-full flex flex-col gap-2 justify-center items-center text-center">
+          <h1 className="font-bold text-3xl text-purple-900">
+            Real Life Practical Exposure
           </h1>
-          <p className="md:text-xl text-purple-700 max-w-3xl font-semibold">
+          <p className="text-purple-700 max-w-3xl font-semibold">
             We believe in providing a space where students feel happy,
             connected, loved, and bond with others besides loving the beautiful
             subject of art.

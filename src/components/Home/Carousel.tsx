@@ -27,6 +27,7 @@ const CarouselComponent = () => {
             height={400}
             src={image}
             alt={`Slide ${index + 1}`}
+            className="max-h-96 object-cover"
           />
         </div>
       ))}

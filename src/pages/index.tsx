@@ -6,8 +6,6 @@ import ParentTestimonialCard from "@/components/Home/ParentTestimonialCard";
 import { Gallery } from "react-grid-gallery";
 import CarouselComponent from "@/components/Home/Carousel";
 import { useRouter } from "next/router";
-import fs from "fs";
-import path from "path";
 import Link from "next/link";
 
 const Index = () => {
@@ -41,7 +39,12 @@ const Index = () => {
             analyzed to understand their strength and skills. We aim to help
             each student reach their full potential.
           </p>
-          <Image src="/assets/Home/About/person.jpg" alt="Placeholder" width={400} height={400} />
+          <Image
+            src="/assets/Home/About/person.jpg"
+            alt="Placeholder"
+            width={400}
+            height={400}
+          />
           <p className="max-w-3xl text-sm font-medium">
             Alok Kudige is a Chitrakala Parishath graduate who specialized in
             painting with a postgraduate degree in design communications,
@@ -53,41 +56,46 @@ const Index = () => {
           </p>
         </section>
 
-        {/* Filler Images Section */}
-        <section className="flex flex-wrap justify-center gap-5">
-          <Image
-            src={"/assets/Home/About/1.jpg"}
-            alt="Placeholder"
-            className="w-24 h-24 lg:w-44 lg:h-44 object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform"
-            width={400}
-            height={400}
-          />
-          <Image
-            src={"/assets/Home/About/2.jpg"}
-            alt="Placeholder"
-            className="w-24 h-24 lg:w-44 lg:h-44 object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform"
-            width={400}
-            height={400}
-          />
-          <Image
-            src={"/assets/Home/About/3.jpg"}
-            alt="Placeholder"
-            className="w-24 h-24 lg:w-44 lg:h-44 object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform"
-            width={400}
-            height={400}
-          />
-          <Image
-            src={"/assets/Home/About/4.jpg"}
-            alt="Placeholder"
-            className="w-24 h-24 lg:w-44 lg:h-44 object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform"
-            width={400}
-            height={400}
-          />
+        <section>
+          <section className="w-full">
+            <CarouselComponent />
+          </section>
         </section>
 
         {/* Art Classes Section */}
         <section className="flex flex-col items-center space-y-4">
           <h1 className="text-3xl font-bold text-green-700">Art Classes</h1>
+          {/* Filler Images Section */}
+          <div className="flex flex-wrap justify-center gap-5">
+            <Image
+              src={"/assets/Home/About/1.jpg"}
+              alt="Placeholder"
+              className="w-24 h-24 lg:w-44 lg:h-44 object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform"
+              width={400}
+              height={400}
+            />
+            <Image
+              src={"/assets/Home/About/2.jpg"}
+              alt="Placeholder"
+              className="w-24 h-24 lg:w-44 lg:h-44 object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform"
+              width={400}
+              height={400}
+            />
+            <Image
+              src={"/assets/Home/About/3.jpg"}
+              alt="Placeholder"
+              className="w-24 h-24 lg:w-44 lg:h-44 object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform"
+              width={400}
+              height={400}
+            />
+            <Image
+              src={"/assets/Home/About/4.jpg"}
+              alt="Placeholder"
+              className="w-24 h-24 lg:w-44 lg:h-44 object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform"
+              width={400}
+              height={400}
+            />
+          </div>
           <div className="flex flex-wrap justify-center gap-8">
             {[
               {
@@ -164,17 +172,57 @@ const Index = () => {
         </section>
 
         {/* Art Therapy Section */}
-        <section className="flex flex-col items-center text-center space-y-4">
-          <h1 className="text-3xl font-bold text-blue-700">Art Therapy</h1>
-          <p className="max-w-3xl text-sm font-medium">
-            Art therapy is an alternative method to help a child with special
-            needs work through issues that are troubling to their development.
-            Art therapy has proven to be a successful form of treatment for
-            special education students having autism, ADHD, dyslexia, and other
-            developmental, behavioral, emotional, or psychological issues. It
-            allows children to express themselves in non-verbal ways through the
-            use of art tools and supplies.
-          </p>
+        <section className="flex flex-col gap-5 items-center text-center space-y-4">
+          <div>
+            <h1 className="text-3xl font-bold text-blue-700">Art Therapy</h1>
+            <p className="max-w-3xl text-sm font-medium">
+              Art therapy is an alternative method to help a child with special
+              needs work through issues that are troubling to their development.
+              Art therapy has proven to be a successful form of treatment for
+              special education students having autism, ADHD, dyslexia, and
+              other developmental, behavioral, emotional, or psychological
+              issues. It allows children to express themselves in non-verbal
+              ways through the use of art tools and supplies.
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-5">
+            <Image
+              src={"/assets/Home/About/1.jpg"}
+              alt="Placeholder"
+              className="w-24 h-24 lg:w-44 lg:h-44 object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform"
+              width={400}
+              height={400}
+            />
+            <Image
+              src={"/assets/Home/About/2.jpg"}
+              alt="Placeholder"
+              className="w-24 h-24 lg:w-44 lg:h-44 object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform"
+              width={400}
+              height={400}
+            />
+            <Image
+              src={"/assets/Home/About/3.jpg"}
+              alt="Placeholder"
+              className="w-24 h-24 lg:w-44 lg:h-44 object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform"
+              width={400}
+              height={400}
+            />
+            <Image
+              src={"/assets/Home/About/4.jpg"}
+              alt="Placeholder"
+              className="w-24 h-24 lg:w-44 lg:h-44 object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform"
+              width={400}
+              height={400}
+            />
+          </div>
+          <div className="w-full flex justify-center">
+            <Link
+              className="w-56 flex justify-center items-center px-4 py-2 rounded-md bg-blue-500 hover:bg-blue-600 duration-300"
+              href="/artTherapy"
+            >
+              <h1 className="font-medium text-xs text-white">Read More</h1>
+            </Link>
+          </div>
         </section>
 
         {/* Student Stories Section */}
@@ -190,7 +238,7 @@ const Index = () => {
               <Image
                 src="https://source.unsplash.com/random"
                 alt="Placeholder"
-                className="lg:w-[40%] w-full h-full object-cover rounded-lg shadow-lg"
+                className="lg:w-[40%] w-full h-96 object-cover rounded-lg shadow-lg"
                 width={400}
                 height={400}
               />
@@ -216,8 +264,8 @@ const Index = () => {
           <h1 className="text-3xl font-bold text-yellow-700">
             Parent Testimonials
           </h1>
-          <div className="w-full overflow-x-auto">
-            <div className="flex flex-col md:flex md:flex-row items-center lg:items-start gap-5 space-x-5 p-2">
+          <div className="w-full">
+            <div className="w-full flex flex-wrap gap-4 justify-center">
               {parentTestimonials.map((testimonial) => (
                 <ParentTestimonialCard
                   key={testimonial.parentName}
@@ -233,6 +281,15 @@ const Index = () => {
         {/* Gallery Section */}
         <section className="flex flex-col items-center space-y-5">
           <h1 className="text-3xl font-bold text-teal-700">Gallery</h1>
+          <div className="w-full">
+            <Image //TODO: Replace with video
+              src="/assets/Gallery/6.jpg"
+              alt="Gallery"
+              width={1920}
+              height={1080}
+              className="w-full h-96 object-cover"
+            />
+          </div>
           <div className="w-full">
             <Gallery images={galleryImages} />
           </div>

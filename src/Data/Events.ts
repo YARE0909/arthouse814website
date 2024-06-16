@@ -74,61 +74,6 @@ export const exhibitionPhotos = [
     width: 400,
     height: 400,
   },
-  {
-    src: "/assets/events/Exhibition/16.jpg",
-    width: 400,
-    height: 400,
-  },
-  {
-    src: "/assets/events/Exhibition/17.jpg",
-    width: 400,
-    height: 400,
-  },
-  {
-    src: "/assets/events/Exhibition/18.jpg",
-    width: 400,
-    height: 400,
-  },
-  {
-    src: "/assets/events/Exhibition/19.jpg",
-    width: 400,
-    height: 400,
-  },
-  {
-    src: "/assets/events/Exhibition/20.jpg",
-    width: 400,
-    height: 400,
-  },
-  {
-    src: "/assets/events/Exhibition/21.jpg",
-    width: 400,
-    height: 400,
-  },
-  {
-    src: "/assets/events/Exhibition/22.jpg",
-    width: 400,
-    height: 400,
-  },
-  {
-    src: "/assets/events/Exhibition/23.jpg",
-    width: 400,
-    height: 400,
-  },
-  {
-    src: "/assets/events/Exhibition/24.jpg",
-    width: 400,
-    height: 400,
-  },
-  {
-    src: "/assets/events/Exhibition/25.jpg",
-    width: 400,
-    height: 400,
-  },
-  {
-    src: "/assets/events/Exhibition/26.jpg",
-    width: 400,
-    height: 400,
-  },
 ];
 
 export const natureCampPhotos = [
@@ -207,61 +152,6 @@ export const natureCampPhotos = [
     width: 400,
     height: 400,
   },
-  {
-    src: "/assets/events/NatureCamp/16.jpg",
-    width: 400,
-    height: 400,
-  },
-  {
-    src: "/assets/events/NatureCamp/17.jpg",
-    width: 400,
-    height: 400,
-  },
-  {
-    src: "/assets/events/NatureCamp/18.jpg",
-    width: 400,
-    height: 400,
-  },
-  {
-    src: "/assets/events/NatureCamp/19.jpg",
-    width: 400,
-    height: 400,
-  },
-  {
-    src: "/assets/events/NatureCamp/20.jpg",
-    width: 400,
-    height: 400,
-  },
-  {
-    src: "/assets/events/NatureCamp/21.jpg",
-    width: 400,
-    height: 400,
-  },
-  {
-    src: "/assets/events/NatureCamp/22.jpg",
-    width: 400,
-    height: 400,
-  },
-  {
-    src: "/assets/events/NatureCamp/23.jpg",
-    width: 400,
-    height: 400,
-  },
-  {
-    src: "/assets/events/NatureCamp/24.jpg",
-    width: 400,
-    height: 400,
-  },
-  {
-    src: "/assets/events/NatureCamp/25.jpg",
-    width: 400,
-    height: 400,
-  },
-  {
-    src: "/assets/events/NatureCamp/26.jpg",
-    width: 400,
-    height: 400,
-  },
 ];
 
 export const birthdayCelebrationsPhotos = [
@@ -287,16 +177,6 @@ export const birthdayCelebrationsPhotos = [
   },
   {
     src: "/assets/events/Birthday/5.jpg",
-    width: 400,
-    height: 400,
-  },
-  {
-    src: "/assets/events/Birthday/6.jpg",
-    width: 400,
-    height: 400,
-  },
-  {
-    src: "/assets/events/Birthday/7.jpg",
     width: 400,
     height: 400,
   },
@@ -375,36 +255,6 @@ export const competitionsPhotos = [
   },
   {
     src: "/assets/events/Competition/15.jpg",
-    width: 400,
-    height: 400,
-  },
-  {
-    src: "/assets/events/Competition/16.jpg",
-    width: 400,
-    height: 400,
-  },
-  {
-    src: "/assets/events/Competition/17.jpg",
-    width: 400,
-    height: 400,
-  },
-  {
-    src: "/assets/events/Competition/18.jpg",
-    width: 400,
-    height: 400,
-  },
-  {
-    src: "/assets/events/Competition/19.jpg",
-    width: 400,
-    height: 400,
-  },
-  {
-    src: "/assets/events/Competition/20.jpg",
-    width: 400,
-    height: 400,
-  },
-  {
-    src: "/assets/events/Competition/21.jpg",
     width: 400,
     height: 400,
   },
