@@ -227,36 +227,59 @@ const Index = () => {
 
         {/* Student Stories Section */}
         <section className="flex flex-col items-center space-y-8">
-          <h1 className="text-3xl font-bold text-red-700">Student Stories</h1>
-          {[1, 2].map((index) => (
-            <div
-              key={index}
-              className={`flex flex-col lg:flex-row ${
-                index % 2 === 0 ? "lg:flex-row-reverse" : ""
-              } items-center gap-5`}
-            >
-              <Image
-                src="https://source.unsplash.com/random"
-                alt="Placeholder"
-                className="lg:w-[40%] w-full h-96 object-cover rounded-lg shadow-lg"
-                width={400}
-                height={400}
-              />
-              <div className="w-full lg:w-[60%] p-4 bg-white shadow-xl rounded-lg">
-                <h2 className="font-bold text-xl mb-2">Student Name</h2>
-                <p className="text-sm font-medium">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Error, minus facilis neque vitae maiores cupiditate, officia
-                  qui dicta perferendis dolores recusandae repellat ullam quidem
-                  reprehenderit pariatur amet blanditiis rerum exercitationem.
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Error, minus facilis neque vitae maiores cupiditate, officia
-                  qui dicta perferendis dolores recusandae repellat ullam quidem
-                  reprehenderit pariatur amet blanditiis rerum exercitationem.
-                </p>
+          <div className="flex flex-col gap-10">
+            <h1 className="text-3xl font-bold text-red-700">Student Stories</h1>
+            <div className="flex flex-col gap-5">
+              <div className={`flex flex-col lg:flex-row items-center gap-5`}>
+                <Image
+                  src="/assets/Home/StudentStories/1.png"
+                  alt="Placeholder"
+                  className="lg:w-[40%] w-full h-96 object-cover rounded-lg shadow-lg"
+                  width={400}
+                  height={400}
+                />
+                <div className="w-full lg:w-[60%] p-8 bg-white shadow-xl rounded-lg">
+                  <h2 className="font-bold text-xl mb-2">Hi! Im Dhyan</h2>
+                  <p className="text-sm font-medium">
+                    I&apos;m a person with autism. I&apos;m interested in
+                    listening to stories, Tom and Jerry, and I love sunsets.
+                    Through art therapy, my goals focus on:
+                    <ol className="list-disc">
+                      <li>Independence</li>
+                      <li>Regulation of behavioral issues</li>
+                      <li>Consistency in activities</li>
+                      <li>Communication</li>
+                    </ol>
+                  </p>
+                </div>
+              </div>
+              <div className={`flex flex-col lg:flex-row items-center gap-5`}>
+                <div className="w-full lg:w-[60%] p-8 bg-white shadow-xl rounded-lg">
+                  <h2 className="font-bold text-xl mb-2">Hi! Im Pragathi</h2>
+                  <p className="text-sm font-medium">
+                    I&apos;m a person with autism. I enjoy short conversations
+                    with people, sharing my day, drawing, and shopping. Through
+                    art therapy, my goals focus on:
+                    <ol className="list-disc">
+                      <li>Communicating in a social group</li>
+                      <li>
+                        Establishing comfort in social settings through
+                        activities
+                      </li>
+                      <li>Cognitive stimulation</li>
+                    </ol>
+                  </p>
+                </div>
+                <Image
+                  src="/assets/Home/StudentStories/2.png"
+                  alt="Placeholder"
+                  className="lg:w-[40%] w-full h-96 object-cover rounded-lg shadow-lg"
+                  width={400}
+                  height={400}
+                />
               </div>
             </div>
-          ))}
+          </div>
         </section>
 
         {/* Parent Testimonials Section */}
