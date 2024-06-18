@@ -7,6 +7,7 @@ import {
   exhibitionPhotos,
   natureCampPhotos,
 } from "@/Data/Events";
+import Image from "next/image";
 
 const Index = () => {
   return (
@@ -26,8 +27,20 @@ const Index = () => {
           <h2 className="font-bold text-4xl text-purple-800 mb-4">
             Nature Camps
           </h2>
-          <div className="w-full">
-            <Gallery images={natureCampPhotos} />
+          <div className="w-full grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2">
+            {natureCampPhotos.map((photo, index) => {
+              return (
+                <div key={index}>
+                  <Image
+                    width={photo.width}
+                    height={photo.height}
+                    src={photo.src}
+                    alt={photo.src}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
         <div className="w-full flex flex-col items-center text-center">
@@ -35,7 +48,21 @@ const Index = () => {
             Gallery Visit (NGMA)
           </h2>
           <div className="w-full">
-            <Gallery images={exhibitionPhotos} />
+            <div className="w-full grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-1">
+              {exhibitionPhotos.map((photo, index) => {
+                return (
+                  <div key={index}>
+                    <Image
+                      width={photo.width}
+                      height={photo.height}
+                      src={photo.src}
+                      alt={photo.src}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
         <div className="w-full flex flex-col items-center text-center">
@@ -43,7 +70,21 @@ const Index = () => {
             Birthday Celebrations
           </h2>
           <div className="w-full">
-            <Gallery images={birthdayCelebrationsPhotos} />
+            <div className="w-full grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-1">
+              {birthdayCelebrationsPhotos.map((photo, index) => {
+                return (
+                  <div key={index}>
+                    <Image
+                      width={photo.width}
+                      height={photo.height}
+                      src={photo.src}
+                      alt={photo.src}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
         <div className="w-full flex flex-col items-center text-center">
@@ -51,7 +92,21 @@ const Index = () => {
             Competitions
           </h2>
           <div className="w-full">
-            <Gallery images={competitionsPhotos} />
+            <div className="w-full grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5 lg:grid-rows-2">
+              {competitionsPhotos.map((photo, index) => {
+                return (
+                  <div key={index}>
+                    <Image
+                      width={photo.width}
+                      height={photo.height}
+                      src={photo.src}
+                      alt={photo.src}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

@@ -28,77 +28,62 @@ export const parentTestimonials = [
 
 export const galleryImages = [
   {
-    src: "/assets/Home/Gallery/1.jpg",
+    src: "/assets/Home/Gallery/G1.jpg",
     width: 400,
     height: 400,
   },
   {
-    src: "/assets/Home/Gallery/2.jpg",
+    src: "/assets/Home/Gallery/G2.jpg",
     width: 400,
     height: 400,
   },
   {
-    src: "/assets/Home/Gallery/3.jpg",
+    src: "/assets/Home/Gallery/G3.jpg",
     width: 400,
     height: 400,
   },
   {
-    src: "/assets/Home/Gallery/4.jpg",
+    src: "/assets/Home/Gallery/G4.jpg",
     width: 400,
     height: 400,
   },
   {
-    src: "/assets/Home/Gallery/5.jpg",
+    src: "/assets/Home/Gallery/G5.jpg",
     width: 400,
     height: 400,
   },
   {
-    src: "/assets/Home/Gallery/6.jpg",
+    src: "/assets/Home/Gallery/G6.jpg",
     width: 400,
     height: 400,
   },
   {
-    src: "/assets/Home/Gallery/7.jpg",
+    src: "/assets/Home/Gallery/G7.jpg",
     width: 400,
     height: 400,
   },
   {
-    src: "/assets/Home/Gallery/8.jpg",
+    src: "/assets/Home/Gallery/G8.jpg",
     width: 400,
     height: 400,
   },
   {
-    src: "/assets/Home/Gallery/9.jpg",
+    src: "/assets/Home/Gallery/G9.jpg",
     width: 400,
     height: 400,
   },
   {
-    src: "/assets/Home/Gallery/10.jpg",
+    src: "/assets/Home/Gallery/G10.jpg",
     width: 400,
     height: 400,
   },
   {
-    src: "/assets/Home/Gallery/11.jpg",
+    src: "/assets/Home/Gallery/G11.jpg",
     width: 400,
     height: 400,
   },
   {
-    src: "/assets/Home/Gallery/12.jpg",
-    width: 400,
-    height: 400,
-  },
-  {
-    src: "/assets/Home/Gallery/13.jpg",
-    width: 400,
-    height: 400,
-  },
-  {
-    src: "/assets/Home/Gallery/14.jpg",
-    width: 400,
-    height: 400,
-  },
-  {
-    src: "/assets/Home/Gallery/15.jpg",
+    src: "/assets/Home/Gallery/G12.jpg",
     width: 400,
     height: 400,
   },
