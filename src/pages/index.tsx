@@ -6,6 +6,7 @@ import ParentTestimonialCard from "@/components/Home/ParentTestimonialCard";
 import { Gallery } from "react-grid-gallery";
 import CarouselComponent from "@/components/Home/Carousel";
 import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa";
 
 const Index = () => {
   const initialImageCarouselList = [
@@ -316,6 +317,16 @@ const Index = () => {
           </div>
           <div className="w-full">
             <Gallery images={galleryImages} />
+          </div>
+          <div className="w-full flex justify-end">
+            <Link
+              className="w-fit flex justify-center items-center px-4 py-2 rounded-md bg-blue-500 hover:bg-blue-600 duration-300"
+              href="/gallery"
+            >
+              <h1 className="font-medium text-xs text-white">
+                <FaArrowRight className="text-white text-xl" />
+              </h1>
+            </Link>
           </div>
         </section>
       </div>
