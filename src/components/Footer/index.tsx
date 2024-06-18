@@ -24,7 +24,7 @@ const Index = () => {
   };
 
   return (
-    <footer className="w-full flex justify-between p-4 bg-white">
+    <footer className="w-full h-full flex justify-between p-4 bg-white">
       <div className="w-full flex flex-col lg:flex lg:flex-row gap-5">
         <div className="flex flex-col gap-5">
           <div>

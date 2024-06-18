@@ -10,7 +10,7 @@ const Index = () => {
       <div className="w-full">
         <Navbar />
       </div>
-      <div className="w-full h-full flex-1 flex justify-center items-center">
+      <div className="w-full h-full flex-1 flex justify-center items-center bg-white">
         <Image
           src="/assets/logo.png"
           alt="Arthouse 814 Logo"
@@ -19,7 +19,7 @@ const Index = () => {
           className=""
         />
       </div>
-      <div className="w-full h-full flex-1 flex justify-center items-center">
+      <div className="w-full h-full flex-1 flex justify-center items-start">
         <Footer />
       </div>
       <div className="fixed bg-green-500 w-32 rounded-lg bottom-10 right-0 p-2">
