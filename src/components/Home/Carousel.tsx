@@ -3,14 +3,9 @@ import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-const CarouselComponent = () => {
-  const imageList = [
-    "/assets/Home/Carousel/1.jpg",
-    "/assets/Home/Carousel/2.jpg",
-    "/assets/Home/Carousel/3.jpg",
-    "/assets/Home/Carousel/4.jpg",
-    "/assets/Home/Carousel/5.jpg",
-  ];
+const CarouselComponent = ({imageList}: {
+  imageList: string[];
+}) => {
 
   return (
     <Carousel

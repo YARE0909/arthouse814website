@@ -6,12 +6,13 @@ const Index = () => {
   return (
     <Layout>
       <div className="p-4 bg-gradient-to-r from-cyan-50 to-cyan-100 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold mb-8 text-cyan-800">Art Therapy</h1>
-
+        <div className="w-full flex justify-center items-center">
+          <h1 className="text-3xl font-bold mb-8 text-cyan-800">Art Therapy</h1>
+        </div>
         <div className="w-full flex flex-col gap-8 mb-12">
           {/* Children with Special Needs */}
-          <div className="p-6 bg-white rounded-lg shadow-lg flex flex-col justify-between">
-            <div>
+          <div className="p-6 bg-white rounded-lg shadow-lg flex flex-col md:flex-row justify-between">
+            <div className="flex-1">
               <h2 className="text-2xl font-bold mb-4 text-purple-700">
                 Children with Special Needs
               </h2>
@@ -47,9 +48,23 @@ const Index = () => {
                 <li className="font-semibold">Creativity</li>
               </ul>
             </div>
+            <div className="flex-1 mt-6 md:mt-0 md:ml-6">
+              <Image
+                width={400}
+                height={400}
+                src="/assets/ArtTherapy/1.png"
+                alt="Art Therapy"
+                className="rounded-lg object-contain w-full h-full"
+              />
+            </div>
           </div>
 
           <div className="flex flex-col gap-10">
+            <div className="w-full flex justify-center items-center">
+              <h1 className="text-3xl font-bold mb-8 text-cyan-800">
+                Student Stories
+              </h1>
+            </div>
             <div className="flex flex-col gap-5">
               <div className="flex flex-col lg:flex-row items-center gap-5">
                 <Image

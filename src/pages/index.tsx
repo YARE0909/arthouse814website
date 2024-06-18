@@ -8,10 +8,24 @@ import CarouselComponent from "@/components/Home/Carousel";
 import Link from "next/link";
 
 const Index = () => {
+  const initialImageCarouselList = [
+    "/assets/Home/Carousel/1.jpg",
+    "/assets/Home/Carousel/2.jpg",
+    "/assets/Home/Carousel/3.jpg",
+    "/assets/Home/Carousel/4.jpg",
+    "/assets/Home/Carousel/5.jpg",
+  ];
+
+  const exhibitionImages = [
+    "/assets/Home/ExhibitionCarousel/1.jpg",
+    "/assets/Home/ExhibitionCarousel/2.jpg",
+    "/assets/Home/ExhibitionCarousel/3.jpg",
+    "/assets/Home/ExhibitionCarousel/4.jpg",
+  ];
+
   return (
     <Layout>
       <div className="p-4 w-full flex flex-col gap-10">
-        
         {/* Logo Section */}
         <section className="flex flex-col items-center">
           <Image
@@ -24,7 +38,7 @@ const Index = () => {
 
         {/* Carousel Section */}
         <section className="w-full">
-          <CarouselComponent />
+          <CarouselComponent imageList={initialImageCarouselList} />
         </section>
 
         {/* Our Journey Section */}
@@ -48,15 +62,17 @@ const Index = () => {
             painting with a postgraduate degree in design communications,
             effectively used in guiding students through in-depth training and
             building perception. He started as a freelancer, climbing stepping
-            stones towards working in Asian Paints as a design consultant. As he
-            began his journey to become a teacher, he started at an art school,
-            finding passion in his work, he branched out individually.
+            stones towards working in Asian Paints as a design consultant. He
+            has exhibited his artwork nationally and internationally in numerous
+            galleries. As he began his journey to become a teacher, he started
+            at an art school, finding passion in his work, he branched out
+            individually.
           </p>
         </section>
 
         <section>
           <section className="w-full">
-            <CarouselComponent />
+            <CarouselComponent imageList={exhibitionImages} />
           </section>
         </section>
 
@@ -105,6 +121,7 @@ const Index = () => {
                   "Hand and eye coordination",
                 ],
                 link: "/artClasses#fiveToSeven",
+                image: "/assets/Home/ArtClasses/1.jpg",
               },
               {
                 age: "8-14 Years",
@@ -116,6 +133,7 @@ const Index = () => {
                   "Theme based art",
                 ],
                 link: "/artClasses#eightToTen",
+                image: "/assets/Home/ArtClasses/2.jpg",
               },
               {
                 age: "15+ Years",
@@ -127,6 +145,7 @@ const Index = () => {
                   "Creative thinking and visualisation",
                 ],
                 link: "/artClasses#elevenToFifteen",
+                image: "/assets/Home/ArtClasses/3.jpg",
               },
               {
                 age: "Adult",
@@ -138,12 +157,22 @@ const Index = () => {
                   "Mixed Media",
                 ],
                 link: "/artClasses#adults",
+                image: "/assets/Home/ArtClasses/4.jpg",
               },
             ].map((group) => (
               <div
                 key={group.age}
                 className="w-60 p-4 bg-white shadow-xl flex flex-col justify-between gap-5 rounded-lg"
               >
+                <div className="w-full">
+                  <Image
+                    src={group.image}
+                    alt={group.age}
+                    className="w-full h-40 object-cover rounded-t-lg"
+                    width={400}
+                    height={400}
+                  />
+                </div>
                 <div>
                   <h2 className="font-semibold text-center">{group.age}</h2>
                   <ul className="mt-2 space-y-1 text-gray-600 text-sm">
@@ -188,28 +217,28 @@ const Index = () => {
           </div>
           <div className="flex flex-wrap justify-center gap-5">
             <Image
-              src={"/assets/Home/About/1.jpg"}
+              src={"/assets/Home/ArtTherapy/1.jpg"}
               alt="Placeholder"
               className="w-24 h-24 lg:w-44 lg:h-44 object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform"
               width={400}
               height={400}
             />
             <Image
-              src={"/assets/Home/About/2.jpg"}
+              src={"/assets/Home/ArtTherapy/2.jpg"}
               alt="Placeholder"
               className="w-24 h-24 lg:w-44 lg:h-44 object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform"
               width={400}
               height={400}
             />
             <Image
-              src={"/assets/Home/About/3.jpg"}
+              src={"/assets/Home/ArtTherapy/3.jpg"}
               alt="Placeholder"
               className="w-24 h-24 lg:w-44 lg:h-44 object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform"
               width={400}
               height={400}
             />
             <Image
-              src={"/assets/Home/About/4.jpg"}
+              src={"/assets/Home/ArtTherapy/4.jpg"}
               alt="Placeholder"
               className="w-24 h-24 lg:w-44 lg:h-44 object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform"
               width={400}
@@ -234,51 +263,36 @@ const Index = () => {
           <div className="flex flex-col gap-10">
             <div className="flex flex-col gap-5">
               <div className="flex flex-col lg:flex-row items-center gap-5">
-                <Image
-                  src="/assets/Home/StudentStories/1.png"
-                  alt="Placeholder"
-                  className="lg:w-[40%] w-full h-96 object-cover rounded-lg shadow-lg"
-                  width={400}
-                  height={400}
-                />
-                <div className="w-full lg:w-[60%] p-8 bg-white shadow-xl rounded-lg">
-                  <h2 className="font-bold text-xl mb-2">Hi! Im Dhyan</h2>
-                  <p className="text-sm font-medium">
-                    I&apos;m a person with autism. I&apos;m interested in
-                    listening to stories, Tom and Jerry, and I love sunsets.
-                    Through art therapy, my goals focus on:
-                  </p>
-                  <ol className="list-disc">
-                    <li>Independence</li>
-                    <li>Regulation of behavioral issues</li>
-                    <li>Consistency in activities</li>
-                    <li>Communication</li>
-                  </ol>
+                <div className="w-full">
+                  <video
+                    width="100%"
+                    autoPlay
+                    loop
+                    controls
+                    className="w-full h-96 object-cover"
+                  >
+                    <source
+                      src="assets/Home/StudentStories/1.mp4"
+                      type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
               </div>
               <div className="flex flex-col lg:flex-row items-center gap-5">
-                <div className="w-full lg:w-[60%] p-8 bg-white shadow-xl rounded-lg">
-                  <h2 className="font-bold text-xl mb-2">Hi! Im Pragathi</h2>
-                  <p className="text-sm font-medium">
-                    I&apos;m a person with autism. I enjoy short conversations
-                    with people, sharing my day, drawing, and shopping. Through
-                    art therapy, my goals focus on:
-                  </p>
-                  <ol className="list-disc">
-                    <li>Communicating in a social group</li>
-                    <li>
-                      Establishing comfort in social settings through activities
-                    </li>
-                    <li>Cognitive stimulation</li>
-                  </ol>
-                </div>
-                <Image
-                  src="/assets/Home/StudentStories/2.png"
-                  alt="Placeholder"
-                  className="lg:w-[40%] w-full h-96 object-cover rounded-lg shadow-lg"
-                  width={400}
-                  height={400}
-                />
+                <video
+                  width="100%"
+                  autoPlay
+                  loop
+                  controls
+                  className="w-full h-96 object-cover"
+                >
+                  <source
+                    src="assets/Home/StudentStories/2.MOV"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
           </div>
@@ -295,7 +309,6 @@ const Index = () => {
                 <ParentTestimonialCard
                   key={testimonial.parentName}
                   parentName={testimonial.parentName}
-                  image={testimonial.image}
                   testimonial={testimonial.testimonial}
                 />
               ))}
@@ -307,8 +320,8 @@ const Index = () => {
         <section className="flex flex-col items-center space-y-5">
           <h1 className="text-3xl font-bold text-teal-700">Gallery</h1>
           <div className="w-full">
-            <video width="400" controls className="w-full" autoPlay loop muted>
-              <source src="assets/Home/Gallery/video.mp4" type="video/mp4" />
+            <video width="400" controls className="w-full" autoPlay loop>
+              <source src="assets/Home/Gallery/video.MOV" type="video/mp4" />
               Your browser does not support HTML video.
             </video>
           </div>

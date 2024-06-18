@@ -23,7 +23,7 @@ const Index = () => {
             title="5 - 7 Years"
             description={[
               "Learning fundamentals",
-              "Playing with colours, exploring colour mixing and creative art using different mediums like oil pastels, colour pencils, soft pastels, watercolours and poster paints.",
+              "Experimenting with colours, exploring colour mixing and creative art using different mediums including oil pastels, colour pencils, soft pastels, watercolours and poster paints.",
               "Hand Grip",
               "Concentration",
               "Hand and eye coordination",
@@ -34,7 +34,12 @@ const Index = () => {
               "Pictorial Storytelling",
               "Group activities",
             ]}
-            imageSrc="/assets/Home/About/1.jpg"
+            imageSrc={[
+              "/assets/ArtClasses/First/1.jpg",
+              "/assets/ArtClasses/First/2.jpg",
+              "/assets/ArtClasses/First/3.jpg",
+              "/assets/ArtClasses/First/4.jpg",
+            ]}
           />
 
           <AgeGroupCard
@@ -47,10 +52,15 @@ const Index = () => {
               "Natural Clay",
               "Collage",
               "Pictorial Storytelling",
-              "Brain stimulation activities (situation based, alphabets)",
+              "Brain Stimulation Activities",
               "Theme based art",
             ]}
-            imageSrc="/assets/Home/About/2.jpg"
+            imageSrc={[
+              "/assets/ArtClasses/Second/1.jpg",
+              "/assets/ArtClasses/Second/2.jpg",
+              "/assets/ArtClasses/Second/3.jpg",
+              "/assets/ArtClasses/Second/4.jpg",
+            ]}
           />
 
           <AgeGroupCard
@@ -68,7 +78,12 @@ const Index = () => {
               "Conceptual Art",
               "Study of different art styles and development of their own style",
             ]}
-            imageSrc="/assets/Home/About/3.jpg"
+            imageSrc={[
+              "/assets/ArtClasses/Third/1.jpg",
+              "/assets/ArtClasses/Third/2.jpg",
+              "/assets/ArtClasses/Third/3.jpg",
+              "/assets/ArtClasses/Third/4.jpg",
+            ]}
           />
 
           <AgeGroupCard
@@ -86,7 +101,12 @@ const Index = () => {
               "Theme / Conceptual Art",
               "Study of different art styles and development of their own style",
             ]}
-            imageSrc="/assets/Home/About/4.jpg"
+            imageSrc={[
+              "/assets/ArtClasses/Fourth/1.jpg",
+              "/assets/ArtClasses/Fourth/2.jpg",
+              "/assets/ArtClasses/Fourth/3.jpg",
+              "/assets/ArtClasses/Fourth/4.jpg",
+            ]}
           />
         </div>
       </div>
@@ -103,22 +123,13 @@ const AgeGroupCard = ({
   id: string;
   title: string;
   description: string[];
-  imageSrc: string;
+  imageSrc: string[];
 }) => {
   return (
     <div
       id={id}
-      className="shadow-xl rounded-lg p-6 bg-white transform transition hover:scale-105 flex md:gap-4 flex-col sm:flex-row"
+      className="shadow-xl rounded-lg p-6 bg-white transform transition hover:scale-105 flex gap-5 flex-col sm:flex-row"
     >
-      <div className="sm:w-2/3 sm:order-2 mb-4 sm:mb-0">
-        <Image
-          width={400}
-          height={400}
-          src={imageSrc}
-          alt={title}
-          className="rounded-lg"
-        />
-      </div>
       <div className="sm:w-2/3 sm:order-1">
         <h1 className="font-bold text-2xl mb-4 text-gray-800">{title}</h1>
         <ul className="list-disc list-inside space-y-2 text-gray-600">
@@ -128,6 +139,18 @@ const AgeGroupCard = ({
             </li>
           ))}
         </ul>
+      </div>
+      <div className="grid grid-cols-2 gap-2">
+        {imageSrc.map((src, index) => (
+          <Image
+            key={index}
+            width={200}
+            height={200}
+            src={src}
+            alt={`${title} ${index + 1}`}
+            className="rounded-lg object-cover w-44 h-44"
+          />
+        ))}
       </div>
     </div>
   );

@@ -1,13 +1,10 @@
-import Image from "next/image";
 import React from "react";
 
 const ParentTestimonialCard = ({
   parentName,
-  image,
   testimonial,
 }: {
   parentName: string;
-  image: string;
   testimonial: string;
 }) => {
   return (

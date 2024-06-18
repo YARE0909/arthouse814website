@@ -1,10 +1,9 @@
-import React, { useRef, useEffect, useState } from "react";
+import React from "react";
 import Layout from "../../components/Layout";
 import { GalleryImage } from "@/Data/Gallery";
 import { Gallery } from "react-grid-gallery";
 
 const Index = () => {
-
   return (
     <Layout>
       <div className="p-4 w-full flex flex-col gap-5">
@@ -15,6 +14,7 @@ const Index = () => {
             autoPlay
             loop
             muted
+            controls
             className="w-full h-96 object-cover"
           >
             <source src="assets/Gallery/video.mp4" type="video/mp4" />
