@@ -70,16 +70,10 @@ const Index = () => {
           </p>
         </section>
 
-        <section>
-          <section className="w-full">
+        <section className="w-full flex flex-col gap-5">
+          <div className="w-full">
             <CarouselComponent imageList={exhibitionImages} />
-          </section>
-        </section>
-
-        {/* Art Classes Section */}
-        <section className="flex flex-col items-center space-y-4">
-          <h1 className="text-3xl font-bold text-green-700">Art Classes</h1>
-          {/* Filler Images Section */}
+          </div>
           <div className="flex flex-wrap justify-center gap-5">
             <Image
               src={"/assets/Home/About/1.jpg"}
@@ -110,7 +104,15 @@ const Index = () => {
               height={400}
             />
           </div>
-          <div className="flex flex-wrap justify-center gap-8">
+        </section>
+
+        {/* Art Classes Section */}
+        <section className="flex flex-col items-center space-y-4">
+          <div>
+            <h1 className="text-3xl font-bold text-green-700">Art Classes</h1>
+          </div>
+          {/* Filler Images Section */}
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-8">
             {[
               {
                 age: "5-7 Years",
@@ -162,17 +164,8 @@ const Index = () => {
             ].map((group) => (
               <div
                 key={group.age}
-                className="w-60 p-4 bg-white shadow-xl flex flex-col justify-between gap-5 rounded-lg"
+                className="w-full p-4 bg-white shadow-xl flex flex-col justify-between gap-5 rounded-lg"
               >
-                <div className="w-full">
-                  <Image
-                    src={group.image}
-                    alt={group.age}
-                    className="w-full h-40 object-cover rounded-t-lg"
-                    width={400}
-                    height={400}
-                  />
-                </div>
                 <div>
                   <h2 className="font-semibold text-center">{group.age}</h2>
                   <ul className="mt-2 space-y-1 text-gray-600 text-sm">
@@ -185,6 +178,15 @@ const Index = () => {
                       </li>
                     ))}
                   </ul>
+                </div>
+                <div className="w-full">
+                  <Image
+                    src={group.image}
+                    alt={group.age}
+                    className="w-full h-40 object-cover rounded-t-lg"
+                    width={400}
+                    height={400}
+                  />
                 </div>
                 <div className="w-full">
                   <Link
@@ -205,6 +207,8 @@ const Index = () => {
         <section className="flex flex-col gap-5 items-center text-center space-y-4">
           <div>
             <h1 className="text-3xl font-bold text-blue-700">Art Therapy</h1>
+          </div>
+          <div>
             <p className="max-w-3xl text-sm font-medium">
               Art therapy is an alternative method to help a child with special
               needs work through issues that are troubling to their development.
@@ -266,9 +270,9 @@ const Index = () => {
                 <div className="w-full">
                   <video
                     width="100%"
-                    autoPlay
                     loop
                     controls
+                    muted
                     className="w-full h-96 object-cover"
                   >
                     <source
@@ -278,21 +282,6 @@ const Index = () => {
                     Your browser does not support the video tag.
                   </video>
                 </div>
-              </div>
-              <div className="flex flex-col lg:flex-row items-center gap-5">
-                <video
-                  width="100%"
-                  autoPlay
-                  loop
-                  controls
-                  className="w-full h-96 object-cover"
-                >
-                  <source
-                    src="assets/Home/StudentStories/2.MOV"
-                    type="video/mp4"
-                  />
-                  Your browser does not support the video tag.
-                </video>
               </div>
             </div>
           </div>
@@ -320,7 +309,7 @@ const Index = () => {
         <section className="flex flex-col items-center space-y-5">
           <h1 className="text-3xl font-bold text-teal-700">Gallery</h1>
           <div className="w-full">
-            <video width="400" controls className="w-full" autoPlay loop>
+            <video width="400" controls className="w-full" muted loop>
               <source src="assets/Home/Gallery/video.MOV" type="video/mp4" />
               Your browser does not support HTML video.
             </video>

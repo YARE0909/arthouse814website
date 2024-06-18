@@ -68,7 +68,7 @@ const Index = () => {
             <div className="flex flex-col gap-5">
               <div className="flex flex-col lg:flex-row items-center gap-5">
                 <Image
-                  src="/assets/Home/StudentStories/1.png"
+                  src="/assets/ArtTherapy/2.png"
                   alt="Placeholder"
                   className="lg:w-[40%] w-full h-96 object-cover rounded-lg shadow-lg"
                   width={400}
@@ -106,7 +106,7 @@ const Index = () => {
                   </ol>
                 </div>
                 <Image
-                  src="/assets/Home/StudentStories/2.png"
+                  src="/assets/ArtTherapy/3.png"
                   alt="Placeholder"
                   className="lg:w-[40%] w-full h-96 object-cover rounded-lg shadow-lg"
                   width={400}
