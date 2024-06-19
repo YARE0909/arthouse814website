@@ -267,15 +267,15 @@ const Index = () => {
             <h1 className="text-3xl font-bold text-red-700">Student Stories</h1>
           </div>
           <div className="flex flex-col gap-10">
-            <div className="flex flex-col gap-5">
-              <div className="flex flex-col lg:flex-row items-center gap-5">
+            <div className="w-full flex flex-col gap-5">
+              <div className="w-full flex flex-col lg:flex-row items-center gap-5">
                 <div className="w-full">
                   <video
                     width="100%"
                     loop
                     controls
                     muted
-                    className="w-full h-96 object-cover"
+                    className="w-full h-full object-cover"
                   >
                     <source
                       src="assets/Home/StudentStories/1.mp4"

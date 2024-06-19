@@ -147,8 +147,21 @@ const Index = () => {
           </div>
         </div>
 
+        <div className="w-full">
+          <video
+            width="100%"
+            loop
+            controls
+            muted
+            className="w-full h-96 object-cover"
+          >
+            <source src="assets/ArtTherapy/video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
         {/* Testimonials */}
-        <div>
+        <div className="pt-4">
           <h2 className="text-2xl font-bold mb-4 text-cyan-800">
             Testimonials
           </h2>

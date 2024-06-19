@@ -9,12 +9,9 @@ const Index = () => {
         <div className="w-full max-w-4xl flex flex-col gap-6">
           <div className="text-center flex flex-col gap-2">
             <h1 className="font-bold text-3xl text-blue-900">
-              “There&apos;s an artist in every child”
+              “Every child is an artist. The problem is how to remain an artist
+              once we grow up.”- Picasso
             </h1>
-            <p className="font-semibold text-blue-900">
-              Every individual at ArtHouse814 is taught how to think, not what
-              to think.
-            </p>
           </div>
 
           {/* Age Group Cards */}
@@ -132,17 +129,6 @@ const AgeGroupCard = ({
     >
       <div className="sm:w-2/3 sm:order-1">
         <h1 className="font-bold text-2xl mb-4 text-gray-800">{title}</h1>
-        {title === "5 - 7 Years" && (
-          <h1 className="font-bold text-sm pb-2">
-            “Every child is an artist. The problem is how to remain an artist
-            once we grow up.”- Picasso
-          </h1>
-        )}
-        {title === "11 - 15 Years" && (
-          <h1 className="font-bold text-sm pb-2">
-            “Have no fear of perfection, you&apos;ll never reach it.”- Dali
-          </h1>
-        )}
         <ul className="list-disc list-inside space-y-2 text-gray-600">
           {description.map((item, index) => (
             <li key={index} className="font-bold text-sm">
