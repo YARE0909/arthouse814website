@@ -12,6 +12,10 @@ const Index = () => {
               “Every child is an artist. The problem is how to remain an artist
               once we grow up.”- Picasso
             </h1>
+            <p className="font-semibold">
+              Every individual at Arthouse 814 is taught how to think, not what
+              to think
+            </p>
           </div>
 
           {/* Age Group Cards */}
