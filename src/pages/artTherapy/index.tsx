@@ -79,6 +79,7 @@ const Index = () => {
                   <p className="text-sm font-medium">
                     I&apos;m a person with autism. I&apos;m interested in
                     listening to stories, Tom and Jerry, and I love sunsets.
+                    <br />
                     Through art therapy, my goals focus on:
                   </p>
                   <ol className="list-disc">
@@ -94,8 +95,9 @@ const Index = () => {
                   <h2 className="font-bold text-xl mb-2">Hi! Im Pragathi</h2>
                   <p className="text-sm font-medium">
                     I&apos;m a person with autism. I enjoy short conversations
-                    with people, sharing my day, drawing, and shopping. Through
-                    art therapy, my goals focus on:
+                    with people, sharing my day, drawing, and shopping.
+                    <br />
+                    Through art therapy, my goals focus on:
                   </p>
                   <ol className="list-disc">
                     <li>Communicating in a social group</li>

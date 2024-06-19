@@ -30,10 +30,11 @@ const Index = () => {
         {/* Logo Section */}
         <section className="flex flex-col items-center">
           <Image
-            src="/assets/logo.png"
+            src="/assets/logo.jpg"
             alt="Arthouse 814 Logo"
             width={200}
             height={200}
+            className="w-1/3"
           />
         </section>
 
@@ -113,7 +114,7 @@ const Index = () => {
             <h1 className="text-3xl font-bold text-green-700">Art Classes</h1>
           </div>
           {/* Filler Images Section */}
-          <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div className="w-fit grid grid-cols-1 sm:grid-cols-2 gap-8">
             {[
               {
                 age: "5-7 Years",
@@ -180,18 +181,18 @@ const Index = () => {
                     ))}
                   </ul>
                 </div>
-                <div className="w-full">
+                <div className="w-full flex justify-center">
                   <Image
                     src={group.image}
                     alt={group.age}
-                    className="w-full h-40 object-cover rounded-t-lg"
+                    className="w-24 h-24 lg:w-44 lg:h-44 object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform"
                     width={400}
                     height={400}
                   />
                 </div>
-                <div className="w-full">
+                <div className="w-full flex justify-center items-center">
                   <Link
-                    className="w-full flex justify-center items-center px-4 py-2 rounded-md bg-blue-500 hover:bg-blue-600 duration-300"
+                    className="w-full max-w-64 flex justify-center items-center px-4 py-2 rounded-md bg-blue-500 hover:bg-blue-600 duration-300"
                     href={group.link}
                   >
                     <h1 className="font-medium text-xs text-white">

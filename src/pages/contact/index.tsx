@@ -12,11 +12,11 @@ const Index = () => {
       </div>
       <div className="w-full h-full flex-1 flex justify-center items-center bg-white">
         <Image
-          src="/assets/logo.png"
+          src="/assets/logo.jpg"
           alt="Arthouse 814 Logo"
           width={200}
           height={200}
-          className=""
+          className="w-1/3"
         />
       </div>
       <div className="w-full h-full flex-1 flex justify-center items-start">
