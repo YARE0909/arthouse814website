@@ -132,6 +132,17 @@ const AgeGroupCard = ({
     >
       <div className="sm:w-2/3 sm:order-1">
         <h1 className="font-bold text-2xl mb-4 text-gray-800">{title}</h1>
+        {title === "5 - 7 Years" && (
+          <h1 className="font-bold text-sm pb-2">
+            “Every child is an artist. The problem is how to remain an artist
+            once we grow up.”- Picasso
+          </h1>
+        )}
+        {title === "11 - 15 Years" && (
+          <h1 className="font-bold text-sm pb-2">
+            “Have no fear of perfection, you&apos;ll never reach it.”- Dali
+          </h1>
+        )}
         <ul className="list-disc list-inside space-y-2 text-gray-600">
           {description.map((item, index) => (
             <li key={index} className="font-bold text-sm">
