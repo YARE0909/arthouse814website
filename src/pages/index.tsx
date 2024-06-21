@@ -45,7 +45,9 @@ const Index = () => {
 
         {/* Our Journey Section */}
         <section className="flex flex-col items-center text-center space-y-4">
-          <h1 className="text-3xl font-bold text-purple-700">Our Journey</h1>
+          <h1 className="text-3xl font-bold text-purple-700 font-Elephant">
+            Our Journey
+          </h1>
           <p className="max-w-3xl text-sm font-medium">
             Established in 2015, Arthouse814 is a fine art institution that
             gives individual attention and nurture to its students. The children
@@ -111,104 +113,183 @@ const Index = () => {
         {/* Art Classes Section */}
         <section className="flex flex-col items-center space-y-4">
           <div>
-            <h1 className="text-3xl font-bold text-green-700">Art Classes</h1>
+            <h1 className="text-3xl font-bold text-[#00FFFF] font-Jokerman">
+              Art Classes
+            </h1>
           </div>
           {/* Filler Images Section */}
           <div className="w-fit grid grid-cols-1 sm:grid-cols-2 gap-8">
-            {[
-              {
-                age: "5-7 Years",
-                items: [
-                  "Learning fundamentals",
-                  "Concentration",
-                  "Hand Grip",
-                  "Hand and eye coordination",
-                ],
-                link: "/artClasses#fiveToSeven",
-                image: "/assets/Home/ArtClasses/1.jpg",
-              },
-              {
-                age: "8-14 Years",
-                items: [
-                  "Natural Clay",
-                  "Collage",
-                  "Painting",
-                  "Pictorial Storytelling",
-                  "Theme based art",
-                ],
-                link: "/artClasses#eightToTen",
-                image: "/assets/Home/ArtClasses/2.jpg",
-              },
-              {
-                age: "15+ Years",
-                items: [
-                  "Drawing and shading",
-                  "Painting",
-                  "Colour Theory",
-                  "Elements of art and design",
-                  "Creative thinking and visualisation",
-                ],
-                link: "/artClasses#elevenToFifteen",
-                image: "/assets/Home/ArtClasses/3.jpg",
-              },
-              {
-                age: "Adult",
-                items: [
-                  "Fundamentals of Art",
-                  "Drawing and shading",
-                  "Colour Theory",
-                  "Clay Modelling",
-                  "Mixed Media",
-                ],
-                link: "/artClasses#adults",
-                image: "/assets/Home/ArtClasses/4.jpg",
-              },
-            ].map((group) => (
-              <div
-                key={group.age}
-                className="w-full p-4 bg-white shadow-xl flex flex-col justify-between gap-5 rounded-lg"
-              >
-                <div>
-                  <h2 className="font-semibold text-center">{group.age}</h2>
-                  <ul className="mt-2 space-y-1 text-gray-600 text-sm">
-                    {group.items.map((item, index) => (
-                      <li
-                        key={index}
-                        className="list-disc list-inside text-sm font-medium"
-                      >
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="w-full flex justify-center">
-                  <Image
-                    src={group.image}
-                    alt={group.age}
-                    className="w-24 h-24 lg:w-44 lg:h-44 object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform"
-                    width={400}
-                    height={400}
-                  />
-                </div>
-                <div className="w-full flex justify-center items-center">
-                  <Link
-                    className="w-full max-w-64 flex justify-center items-center px-4 py-2 rounded-md bg-blue-500 hover:bg-blue-600 duration-300"
-                    href={group.link}
-                  >
-                    <h1 className="font-medium text-xs text-white">
-                      Read More
-                    </h1>
-                  </Link>
-                </div>
+            <div className="w-full p-4 bg-white shadow-xl flex flex-col justify-between gap-5 rounded-lg">
+              <div>
+                <h2 className="font-semibold text-center text-orange-400 font-LucidaCalligraphy">
+                  5-7 Years
+                </h2>
+                <ul className="mt-2 space-y-1 text-gray-600 text-sm font-LucidaCalligraphy">
+                  <li className="list-disc list-inside text-sm font-medium">
+                    Learning fundamentals
+                  </li>
+                  <li className="list-disc list-inside text-sm font-medium">
+                    Concentration
+                  </li>
+                  <li className="list-disc list-inside text-sm font-medium">
+                    Hand Grip
+                  </li>
+                  <li className="list-disc list-inside text-sm font-medium">
+                    Hand and eye coordination
+                  </li>
+                </ul>
               </div>
-            ))}
+              <div className="w-full flex justify-center">
+                <Image
+                  src="/assets/Home/ArtClasses/1.jpg"
+                  alt="5-7 Years"
+                  className="w-24 h-24 lg:w-44 lg:h-44 object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform"
+                  width={400}
+                  height={400}
+                />
+              </div>
+              <div className="w-full flex justify-center items-center">
+                <Link
+                  className="w-full max-w-64 flex justify-center items-center px-4 py-2 rounded-md bg-blue-500 hover:bg-blue-600 duration-300"
+                  href="/artClasses#fiveToSeven"
+                >
+                  <h1 className="font-medium text-xs text-white">Read More</h1>
+                </Link>
+              </div>
+            </div>
+
+            <div className="w-full p-4 bg-white shadow-xl flex flex-col justify-between gap-5 rounded-lg">
+              <div>
+                <h2 className="font-semibold text-center text-green-400 font-LucidaCalligraphy">
+                  8-14 Years
+                </h2>
+                <ul className="mt-2 space-y-1 text-gray-600 text-sm font-LucidaCalligraphy">
+                  <li className="list-disc list-inside text-sm font-medium">
+                    Natural Clay
+                  </li>
+                  <li className="list-disc list-inside text-sm font-medium">
+                    Collage
+                  </li>
+                  <li className="list-disc list-inside text-sm font-medium">
+                    Painting
+                  </li>
+                  <li className="list-disc list-inside text-sm font-medium">
+                    Pictorial Storytelling
+                  </li>
+                  <li className="list-disc list-inside text-sm font-medium">
+                    Theme based art
+                  </li>
+                </ul>
+              </div>
+              <div className="w-full flex justify-center">
+                <Image
+                  src="/assets/Home/ArtClasses/2.jpg"
+                  alt="8-14 Years"
+                  className="w-24 h-24 lg:w-44 lg:h-44 object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform"
+                  width={400}
+                  height={400}
+                />
+              </div>
+              <div className="w-full flex justify-center items-center">
+                <Link
+                  className="w-full max-w-64 flex justify-center items-center px-4 py-2 rounded-md bg-blue-500 hover:bg-blue-600 duration-300"
+                  href="/artClasses#eightToTen"
+                >
+                  <h1 className="font-medium text-xs text-white">Read More</h1>
+                </Link>
+              </div>
+            </div>
+
+            <div className="w-full p-4 bg-white shadow-xl flex flex-col justify-between gap-5 rounded-lg">
+              <div>
+                <h2 className="font-semibold text-center text-[#DC143C] font-LucidaCalligraphy">
+                  15+ Years
+                </h2>
+                <ul className="mt-2 space-y-1 text-gray-600 text-sm font-LucidaCalligraphy">
+                  <li className="list-disc list-inside text-sm font-medium">
+                    Drawing and shading
+                  </li>
+                  <li className="list-disc list-inside text-sm font-medium">
+                    Painting
+                  </li>
+                  <li className="list-disc list-inside text-sm font-medium">
+                    Colour Theory
+                  </li>
+                  <li className="list-disc list-inside text-sm font-medium">
+                    Elements of art and design
+                  </li>
+                  <li className="list-disc list-inside text-sm font-medium">
+                    Creative thinking and visualisation
+                  </li>
+                </ul>
+              </div>
+              <div className="w-full flex justify-center">
+                <Image
+                  src="/assets/Home/ArtClasses/3.jpg"
+                  alt="15+ Years"
+                  className="w-24 h-24 lg:w-44 lg:h-44 object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform"
+                  width={400}
+                  height={400}
+                />
+              </div>
+              <div className="w-full flex justify-center items-center">
+                <Link
+                  className="w-full max-w-64 flex justify-center items-center px-4 py-2 rounded-md bg-blue-500 hover:bg-blue-600 duration-300"
+                  href="/artClasses#elevenToFifteen"
+                >
+                  <h1 className="font-medium text-xs text-white">Read More</h1>
+                </Link>
+              </div>
+            </div>
+
+            <div className="w-full p-4 bg-white shadow-xl flex flex-col justify-between gap-5 rounded-lg">
+              <div>
+                <h2 className="font-semibold text-center font-LucidaCalligraphy">
+                  Adult
+                </h2>
+                <ul className="mt-2 space-y-1 text-gray-600 text-sm font-LucidaCalligraphy">
+                  <li className="list-disc list-inside text-sm font-medium">
+                    Fundamentals of Art
+                  </li>
+                  <li className="list-disc list-inside text-sm font-medium">
+                    Drawing and shading
+                  </li>
+                  <li className="list-disc list-inside text-sm font-medium">
+                    Colour Theory
+                  </li>
+                  <li className="list-disc list-inside text-sm font-medium">
+                    Clay Modelling
+                  </li>
+                  <li className="list-disc list-inside text-sm font-medium">
+                    Mixed Media
+                  </li>
+                </ul>
+              </div>
+              <div className="w-full flex justify-center">
+                <Image
+                  src="/assets/Home/ArtClasses/4.jpg"
+                  alt="Adult"
+                  className="w-24 h-24 lg:w-44 lg:h-44 object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform"
+                  width={400}
+                  height={400}
+                />
+              </div>
+              <div className="w-full flex justify-center items-center">
+                <Link
+                  className="w-full max-w-64 flex justify-center items-center px-4 py-2 rounded-md bg-blue-500 hover:bg-blue-600 duration-300"
+                  href="/artClasses#adults"
+                >
+                  <h1 className="font-medium text-xs text-white">Read More</h1>
+                </Link>
+              </div>
+            </div>
           </div>
         </section>
 
         {/* Art Therapy Section */}
         <section className="flex flex-col gap-5 items-center text-center space-y-4">
           <div>
-            <h1 className="text-3xl font-bold text-blue-700">Art Therapy</h1>
+            <h1 className="text-3xl font-bold text-green-700">Art Therapy</h1>
           </div>
           <div>
             <p className="max-w-3xl text-sm font-medium">

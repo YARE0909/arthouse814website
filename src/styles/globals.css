@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  @apply font-Montserrat;
+:root {
+  --font-jokerman: "Jokerman", sans-serif;
+  --font-lucia-calligraphy: "Lucida Calligraphy", sans-serif;
+  --font-elephant: "Elephant", sans-serif;
 }
 
 .nav-item {

@@ -16,9 +16,13 @@ const config: Config = {
       fontFamily: {
         ChelseaMarket: ["Chelsea Market", "cursive"],
         Montserrat: ["Montserrat", "sans-serif"],
+        Jokerman: ["var(--font-jokerman)", "sans-serif"],
+        LucidaCalligraphy: ["var(--font-lucia-calligraphy)", "sans-serif"],
+        Elephant: ["var(--font-elephant)", "sans-serif"],
       },
     },
   },
   plugins: [],
 };
+
 export default config;
