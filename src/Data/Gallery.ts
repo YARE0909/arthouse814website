@@ -199,4 +199,9 @@ export const GalleryImage = [
     width: 400,
     height: 400,
   },
+  {
+    src: "/assets/Gallery/G41.jpg",
+    width: 400,
+    height: 400,
+  },
 ];
