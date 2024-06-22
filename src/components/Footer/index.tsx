@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoLogoInstagram } from "react-icons/io";
-import { FaLinkedin } from "react-icons/fa6";
 import { FaFacebookSquare, FaPhone } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
@@ -9,11 +8,53 @@ import { useRouter } from "next/router";
 
 const Index = () => {
   const router = useRouter();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phoneNumber: "",
+    message: "",
+  });
 
-  const handleEnquiryFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleEnquiryFormSubmit = async (
+    e: React.FormEvent<HTMLFormElement>
+  ) => {
     e.preventDefault();
     console.log("Enquiry Form Submitted");
-    // TODO: Handle form submission
+
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        console.log("Email sent successfully");
+        setFormData({
+          name: "",
+          email: "",
+          phoneNumber: "",
+          message: "",
+        });
+        alert("Enquiry submitted successfully");
+      } else {
+        console.error("Failed to send email");
+      }
+    } catch (error) {
+      console.error("Error submitting the form", error);
+    }
+  };
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
 
   const handleOpenLink = () => {
@@ -127,16 +168,20 @@ m7!3m6!1s0x3bae172eedd1abc3:0x4019a8d9b406b0ce!2sArt+House+814!8m2!3d13.0225985!
                 <input
                   type="text"
                   placeholder="Name"
-                  name="Name"
+                  name="name"
                   className="border-2 border-gray-200 px-2 py-1 w-full text-sm rounded-md"
+                  onChange={handleInputChange}
+                  value={formData.name}
                 />
               </div>
               <div>
                 <input
                   type="email"
                   placeholder="Email"
-                  name="Email"
+                  name="email"
                   className="border-2 border-gray-200 px-2 py-1 w-full text-sm rounded-md"
+                  onChange={handleInputChange}
+                  value={formData.email}
                 />
               </div>
               <div>
@@ -145,13 +190,17 @@ m7!3m6!1s0x3bae172eedd1abc3:0x4019a8d9b406b0ce!2sArt+House+814!8m2!3d13.0225985!
                   placeholder="Phone Number"
                   name="phoneNumber"
                   className="border-2 border-gray-200 px-2 py-1 w-full text-sm rounded-md"
+                  onChange={handleInputChange}
+                  value={formData.phoneNumber}
                 />
               </div>
               <div>
                 <textarea
                   placeholder="Message"
-                  name="Message"
+                  name="message"
                   className="border-2 border-gray-200 px-2 py-1 w-full text-sm rounded-md"
+                  onChange={handleInputChange}
+                  value={formData.message}
                 />
               </div>
               <div>
