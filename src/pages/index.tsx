@@ -34,7 +34,7 @@ const Index = () => {
             alt="Arthouse 814 Logo"
             width={200}
             height={200}
-            className="w-1/3"
+            className="w-[20rem]"
           />
         </section>
 
@@ -113,7 +113,7 @@ const Index = () => {
         {/* Art Classes Section */}
         <section className="flex flex-col items-center space-y-4">
           <div>
-            <h1 className="text-3xl font-bold text-[#00FFFF] font-Jokerman">
+            <h1 className="text-3xl font-bold text-[#40c1c3] font-Jokerman">
               Art Classes
             </h1>
           </div>
@@ -244,7 +244,7 @@ const Index = () => {
 
             <div className="w-full p-4 bg-white shadow-xl flex flex-col justify-between gap-5 rounded-lg">
               <div>
-                <h2 className="font-semibold text-center font-LucidaCalligraphy">
+                <h2 className="font-semibold text-center font-LucidaCalligraphy text-[#B22222]">
                   Adult
                 </h2>
                 <ul className="mt-2 space-y-1 text-gray-600 text-sm font-LucidaCalligraphy">

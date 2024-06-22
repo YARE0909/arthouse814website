@@ -24,8 +24,8 @@ const Index = () => {
           </p>
         </div>
         <div className="w-full flex flex-col items-center text-center">
-          <h2 className="font-bold text-4xl text-purple-800 mb-4">
-            Nature Camps
+          <h2 className="font-bold text-4xl text-green-500 mb-4">
+            Nature Camp
           </h2>
           <div className="w-full grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2">
             {natureCampPhotos.map((photo, index) => {

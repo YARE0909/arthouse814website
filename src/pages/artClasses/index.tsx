@@ -89,7 +89,7 @@ const Index = () => {
 
           <AgeGroupCard
             id="adults"
-            title="Adults (16+)"
+            title="Adult (16+)"
             description={[
               "Fundamentals of Art",
               "Drawing and shading (pencils, pen, charcoal, oil pastels and soft pastels)",
@@ -129,10 +129,19 @@ const AgeGroupCard = ({
   return (
     <div
       id={id}
-      className="shadow-xl rounded-lg p-6 bg-white transform transition hover:scale-105 flex gap-5 flex-col sm:flex-row"
+      className="shadow-xl rounded-lg p-6 bg-white transform transition hover:scale-105 flex gap-5 flex-col sm:flex-row font-LucidaCalligraphy"
     >
       <div className="sm:w-2/3 sm:order-1">
-        <h1 className="font-bold text-2xl mb-4 text-gray-800">{title}</h1>
+        <h1
+          className={`${"font-bold text-2xl mb-4"}
+          ${id === "fiveToSeven" && "text-orange-400"}
+          ${id === "eightToTen" && "text-green-400"}
+          ${id === "elevenToFifteen" && "text-[#DC143C]"}
+          ${id === "adults" && "text-[#B22222]"}
+          `}
+        >
+          {title}
+        </h1>
         <ul className="list-disc list-inside space-y-2 text-gray-600">
           {description.map((item, index) => (
             <li key={index} className="font-bold text-sm">
