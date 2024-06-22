@@ -24,15 +24,15 @@ export default async function handler(
   const transporter = nodemailer.createTransport({
     service: "Gmail",
     auth: {
-      user: "p9672540@gmail.com",
-      pass: "oaob vbtn biws bsep",
+      user: "arthouse814enquiry@gmail.com",
+      pass: "wquf vudk hsry cgnw",
     },
   });
 
   const mailOptions = {
     from: email,
     to: "thearthouse814@gmail.com",
-    subject: "New Enquiry from Arthouse 814",
+    subject: `New Enquiry Form Submitted for ArtHouse814 - From ${name}`,
     html: `
     <!DOCTYPE html>
     <html>
