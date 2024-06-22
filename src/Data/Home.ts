@@ -82,4 +82,9 @@ export const galleryImages = [
     width: 400,
     height: 400,
   },
+  {
+    src: "/assets/Home/Gallery/G12.jpg",
+    width: 400,
+    height: 400,
+  },
 ];
