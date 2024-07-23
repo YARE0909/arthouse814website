@@ -15,11 +15,17 @@ const Index = () => {
     message: "",
   });
 
+  const blackListedEmails = ["hilton.johnston76@projectmy.net"];
+
   const handleEnquiryFormSubmit = async (
     e: React.FormEvent<HTMLFormElement>
   ) => {
     e.preventDefault();
     console.log("Enquiry Form Submitted");
+
+    if (blackListedEmails.includes(formData.email)) {
+      return;
+    }
 
     try {
       const response = await fetch("/api/send-email", {
