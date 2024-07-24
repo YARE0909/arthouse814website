@@ -1,21 +1,37 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { IoLogoInstagram } from "react-icons/io";
 import { FaFacebookSquare, FaPhone } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { Map, Marker } from "pigeon-maps";
-import { useRouter } from "next/router";
 
-const Index = () => {
-  const router = useRouter();
-  const [formData, setFormData] = useState({
+interface FormData {
+  name: string;
+  email: string;
+  phoneNumber: string;
+  message: string;
+  honeypot: string;
+  timestamp: number | string;
+}
+
+const Index: React.FC = () => {
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     phoneNumber: "",
     message: "",
+    honeypot: "",
+    timestamp: "",
   });
 
   const blackListedEmails = ["hilton.johnston76@projectmy.net"];
+
+  useEffect(() => {
+    setFormData((prevData) => ({
+      ...prevData,
+      timestamp: Date.now(),
+    }));
+  }, []);
 
   const handleEnquiryFormSubmit = async (
     e: React.FormEvent<HTMLFormElement>
@@ -24,6 +40,13 @@ const Index = () => {
     console.log("Enquiry Form Submitted");
 
     if (blackListedEmails.includes(formData.email)) {
+      return;
+    }
+
+    const submissionTime = Date.now();
+    const elapsedTime = submissionTime - Number(formData.timestamp);
+
+    if (formData.honeypot || elapsedTime < 2000) {
       return;
     }
 
@@ -43,6 +66,8 @@ const Index = () => {
           email: "",
           phoneNumber: "",
           message: "",
+          honeypot: "",
+          timestamp: Date.now(),
         });
         alert("Enquiry submitted successfully");
       } else {
@@ -143,10 +168,7 @@ const Index = () => {
               </div>
               <div>
                 <a
-                  href="https://www.google.co.in/maps/place/Art+House+814/@13.0225985,77.6436839,17z/data=!4m14!1
-m7!3m6!1s0x3bae172eedd1abc3:0x4019a8d9b406b0ce!2sArt+House+814!8m2!3d13.0225985!4d7
-7.6462588!16s%2Fg%2F11g6b0h9x5!3m5!1s0x3bae172eedd1abc3:0x4019a8d9b406b0ce!8m2!3d
-13.0225985!4d77.6462588!16s%2Fg%2F11g6b0h9x5?hl=en-in&amp;entry=ttu"
+                  href="https://www.google.co.in/maps/place/Art+House+814/@13.0225985,77.6436839,17z/data=!4m14!1m7!3m6!1s0x3bae172eedd1abc3:0x4019a8d9b406b0ce!2sArt+House+814!8m2!3d13.0225985!4d77.6462588!16s%2Fg%2F11g6b0h9x5!3m5!1s0x3bae172eedd1abc3:0x4019a8d9b406b0ce!8m2!3d13.0225985!4d77.6462588!16s%2Fg%2F11g6b0h9x5?hl=en-in&amp;entry=ttu"
                   target="_blank"
                   className="text-xs font-medium hover:text-blue-500 duration-300 flex flex-col gap-1"
                 >
@@ -170,6 +192,14 @@ m7!3m6!1s0x3bae172eedd1abc3:0x4019a8d9b406b0ce!2sArt+House+814!8m2!3d13.0225985!
               onSubmit={handleEnquiryFormSubmit}
               className="flex flex-col gap-3 w-full"
             >
+              <div className="hidden">
+                <input
+                  type="text"
+                  name="honeypot"
+                  value={formData.honeypot}
+                  onChange={handleInputChange}
+                />
+              </div>
               <div>
                 <input
                   type="text"
