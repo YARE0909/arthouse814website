@@ -374,7 +374,7 @@ const Index = () => {
                     className="w-full h-full object-cover"
                   >
                     <source
-                      src="assets/Home/StudentStories/2.mp4"
+                      src="assets/Home/StudentStories/3.mp4"
                       type="video/mp4"
                     />
                     Your browser does not support the video tag.
@@ -389,7 +389,7 @@ const Index = () => {
                     className="w-full h-full object-cover"
                   >
                     <source
-                      src="assets/Home/StudentStories/3.mp4"
+                      src="assets/Home/StudentStories/2.mp4"
                       type="video/mp4"
                     />
                     Your browser does not support the video tag.
