@@ -365,6 +365,36 @@ const Index = () => {
                     Your browser does not support the video tag.
                   </video>
                 </div>
+                <div className="w-full">
+                  <video
+                    width="100%"
+                    loop
+                    controls
+                    muted
+                    className="w-full h-full object-cover"
+                  >
+                    <source
+                      src="assets/Home/StudentStories/2.mp4"
+                      type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div className="w-full">
+                  <video
+                    width="100%"
+                    loop
+                    controls
+                    muted
+                    className="w-full h-full object-cover"
+                  >
+                    <source
+                      src="assets/Home/StudentStories/3.mp4"
+                      type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
               </div>
             </div>
           </div>
