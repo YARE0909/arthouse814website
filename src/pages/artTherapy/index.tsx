@@ -115,8 +115,77 @@ const Index = () => {
                   height={400}
                 />
               </div>
+              <div className="flex flex-col lg:flex-row items-center gap-5">
+                <Image
+                  src="/assets/ArtTherapy/4.jpg"
+                  alt="Placeholder"
+                  className="lg:w-[40%] w-full h-96 object-contain rounded-lg shadow-lg"
+                  width={400}
+                  height={400}
+                />
+                <div className="w-full lg:w-[60%] p-8 bg-white shadow-xl rounded-lg">
+                  <h2 className="font-bold text-xl mb-2">
+                    {" "}
+                    Hi! I&apos;m Ayaan
+                  </h2>
+                  <p className="text-sm font-medium">
+                    I fall in the autism spectrum. I love fashion, singing,
+                    going to the gym, Peppa pig and am fascinated by colours.
+                    Through art therapy, my goals are to focus on:
+                  </p>
+                  <ol className="list-disc">
+                    <li>Improving concentration and consistency</li>
+                    <li>Emotional and behavioural regulation</li>
+                    <li>Cognitive stimulation </li>
+                  </ol>
+                </div>
+              </div>
+              <div className="flex flex-col lg:flex-row items-center gap-5">
+                <div className="w-full lg:w-[60%] p-8 bg-white shadow-xl rounded-lg">
+                  <h2 className="font-bold text-xl mb-2">Hi! I&apos;m Hema</h2>
+                  <p className="text-sm font-medium">
+                    I am a girl with autism and speech delay. I love stories,
+                    dressing up, food, plants, animals and learning about
+                    different topics.
+                    <br />
+                    Through art therapy, my goals focus on:
+                  </p>
+                  <ol className="list-disc">
+                    <li>
+                      Promoting imagination and curiosity through story building
+                      activities
+                    </li>
+                    <li>Listening and following commands</li>
+                    <li>Reducing stubbornness and distraction</li>
+                    <li>
+                      Increasing interaction and social communication within a
+                      group
+                    </li>
+                  </ol>
+                </div>
+                <Image
+                  src="/assets/ArtTherapy/5.jpg"
+                  alt="Placeholder"
+                  className="lg:w-[40%] w-full h-96 object-cover rounded-lg shadow-lg"
+                  width={400}
+                  height={400}
+                />
+              </div>
             </div>
           </div>
+
+          <div className="w-full">
+          <video
+            width="100%"
+            loop
+            controls
+            muted
+            className="w-full h-96 object-contain"
+          >
+            <source src="assets/ArtTherapy/video2.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
 
           {/* Adults */}
           <div className="p-6 bg-white rounded-lg shadow-lg flex flex-col justify-between">
@@ -160,6 +229,13 @@ const Index = () => {
           </video>
         </div>
 
+        <div className="w-full flex items-center justify-center mt-4 text-cyan-600">
+          <h1 className="font-bold text-2xl text-center">
+            Arthouse 814 has collaborated with Dhriti Centre for ABA and Autism
+            Related Services to conduct weekly art therapy sessions for their
+            children with special needs.
+          </h1>
+        </div>
         {/* Testimonials */}
         <div className="pt-4">
           <h2 className="text-2xl font-bold mb-4 text-cyan-800">
