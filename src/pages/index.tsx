@@ -430,6 +430,7 @@ const Index = () => {
             <div className="w-full grid grid-cols-1 lg:grid-cols-4 gap-4">
               {writefullTestimonialImages.map((testimonial) => (
                 <Image
+                  key={testimonial.src}
                   src={testimonial.src}
                   alt="Placeholder"
                   className="w-full h-full lg:w-full lg:h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform"
