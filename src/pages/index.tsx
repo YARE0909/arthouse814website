@@ -1,7 +1,11 @@
 import React, { useRef, useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import Image from "next/image";
-import { galleryImages, parentTestimonials } from "@/Data/Home";
+import {
+  galleryImages,
+  parentTestimonials,
+  writefullTestimonialImages,
+} from "@/Data/Home";
 import ParentTestimonialCard from "@/components/Home/ParentTestimonialCard";
 import { Gallery } from "react-grid-gallery";
 import CarouselComponent from "@/components/Home/Carousel";
@@ -412,6 +416,25 @@ const Index = () => {
                   key={testimonial.parentName}
                   parentName={testimonial.parentName}
                   testimonial={testimonial.testimonial}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="flex flex-col items-center space-y-5">
+          <h1 className="text-3xl font-bold text-yellow-700 text-center">
+            Writefull Testimonials Through A Book
+          </h1>
+          <div className="w-full">
+            <div className="w-full grid grid-cols-1 lg:grid-cols-4 gap-4">
+              {writefullTestimonialImages.map((testimonial) => (
+                <Image
+                  src={testimonial.src}
+                  alt="Placeholder"
+                  className="w-full h-full lg:w-full lg:h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform"
+                  width={4000}
+                  height={4000}
                 />
               ))}
             </div>

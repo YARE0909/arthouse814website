@@ -26,6 +26,30 @@ export const parentTestimonials = [
   },
 ];
 
+export const writefullTestimonialImages = [
+  {
+    src: "/assets/Home/WritefullTestimonials/1.png",
+    width: 400,
+    height: 400,
+  },
+  {
+    src: "/assets/Home/WritefullTestimonials/2.png",
+    width: 400,
+    height: 400,
+  },
+  {
+    src: "/assets/Home/WritefullTestimonials/3.png",
+    width: 400,
+    height: 400,
+  },
+  {
+    src: "/assets/Home/WritefullTestimonials/4.png",
+    width: 400,
+    height: 400,
+  },
+];
+
+
 export const galleryImages = [
   {
     src: "/assets/Home/Gallery/G1.jpg",
