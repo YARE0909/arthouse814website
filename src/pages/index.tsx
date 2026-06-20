@@ -11,6 +11,7 @@ import { Gallery } from "react-grid-gallery";
 import CarouselComponent from "@/components/Home/Carousel";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
+import ImageGallery from "@/components/Home/ImageGallery";
 
 const Index = () => {
   const initialImageCarouselList = [
@@ -322,19 +323,27 @@ const Index = () => {
               height={400}
             />
             <Image
-              src={"/assets/Home/ArtTherapy/3.jpg"}
+              src={"/assets/Home/ArtTherapy/5.jpg"}
               alt="Placeholder"
               className="w-24 h-24 lg:w-44 lg:h-44 object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform"
               width={400}
               height={400}
             />
             <Image
-              src={"/assets/Home/ArtTherapy/4.jpg"}
+              src={"/assets/Home/ArtTherapy/6.jpg"}
               alt="Placeholder"
               className="w-24 h-24 lg:w-44 lg:h-44 object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform"
               width={400}
               height={400}
             />
+            <Image
+              src={"/assets/Home/ArtTherapy/7.jpg"}
+              alt="Placeholder"
+              className="w-24 h-24 lg:w-44 lg:h-44 object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform"
+              width={400}
+              height={400}
+            />
+            
           </div>
           <div className="w-full flex justify-center">
             <Link
@@ -423,22 +432,11 @@ const Index = () => {
         </section>
 
         <section className="flex flex-col items-center space-y-5">
-          <h1 className="text-3xl font-bold text-yellow-700 text-center">
-            Writefull Testimonials Through A Book
-          </h1>
           <div className="w-full">
-            <div className="w-full grid grid-cols-1 lg:grid-cols-4 gap-4">
-              {writefullTestimonialImages.map((testimonial) => (
-                <Image
-                  key={testimonial.src}
-                  src={testimonial.src}
-                  alt="Placeholder"
-                  className="w-full h-full lg:w-full lg:h-full object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform"
-                  width={4000}
-                  height={4000}
-                />
-              ))}
-            </div>
+            <ImageGallery
+              title="Writefull Testimonials Through A Book"
+              images={writefullTestimonialImages}
+            />
           </div>
         </section>
 

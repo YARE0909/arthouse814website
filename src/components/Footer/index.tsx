@@ -176,7 +176,7 @@ const Index: React.FC = () => {
                     1st, 814, 5th A Cross Rd, HRBR Layout 1st Block, HRBR
                     Layout, Kalyan Nagar, Bengaluru, Karnataka 560043, India,
                   </span>
-                  <span>Landmark : Next to Royal Enfield Showroom</span>
+                  <span>Landmark : Next to PepperFry Kalyan Nagar</span>
                 </a>
               </div>
             </div>
